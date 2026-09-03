@@ -3,47 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghriitam | Pure Ghee. Ancient Wisdom. Modern Living.</title>
-  <meta name="description" content="Ghriitam premium Indian ghee, handcrafted with traditional Bilona wisdom for modern homes.">
-  <meta name="theme-color" content="#0d0a1a">
+  <title>Ghriitam | Pure Desi Bilona Ghee - Rooted by Purity</title>
+  <meta name="description" content="Ghriitam premium Indian ghee, handcrafted with traditional Bilona wisdom. 100% Pure, natural & farm-fresh.">
+  <meta name="theme-color" content="#3B1F10">
   <!-- Open Graph / WhatsApp sharing -->
-  <meta property="og:title" content="Ghriitam | Pure Desi Bilona Ghee - Janmashtami Offer">
-  <meta property="og:description" content="Celebrate Shri Krishna Janmashtami with 15% OFF on Ghriitam Desi Bilona Ghee + FREE Delivery across India.">
-  <meta property="og:image" content="assets/krishna-makhan.jpg">
+  <meta property="og:title" content="Ghriitam | Pure Desi Bilona Ghee - 10% OFF Special Offer">
+  <meta property="og:description" content="Celebrate purity with 10% OFF on Ghriitam Desi Bilona Ghee + FREE Delivery across India.">
+  <meta property="og:image" content="assets/ghriitam-jar-web.jpg">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦚</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍯</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     /* ============================================================
-       ROOT TOKENS — Janmashtami palette
-       Deep navy-midnight + golden saffron + lotus pink + peacock teal
+       ROOT COLOR PALETTE — User Specified
+       🟢 Green: #206522
+       🟡 Golden: #DFA305
+       🤎 Brown (Rooted by purity): #3B1F10
+       🥛 Cream: #FFF8F0
     ============================================================ */
     :root {
-      --midnight:  #0d0a1a;
-      --deep-navy: #130f2a;
-      --navy:      #1a1440;
-      --gold:      #f5c842;
-      --gold-light:#ffe97a;
-      --saffron:   #ff8c00;
-      --peacock:   #00b4d8;
-      --lotus:     #e83e8c;
-      --cream:     #fff8f0;
-      --white:     #ffffff;
-      --muted:     #9e9bbf;
-      --shadow:    0 16px 40px rgba(0,0,0,0.45);
-      --glow-gold: 0 0 28px rgba(245,200,66,0.45);
-      --radius:    12px;
-      --max:       1440px;
+      --brown:       #3B1F10;
+      --deep-brown:  #251209;
+      --light-brown: #542d18;
+      --gold:        #DFA305;
+      --gold-light:  #f3bf32;
+      --green:       #206522;
+      --green-light: #2d8230;
+      --cream:       #FFF8F0;
+      --white:       #ffffff;
+      --muted:       #d4bfb2;
+      --shadow:      0 16px 40px rgba(0,0,0,0.5);
+      --glow-gold:   0 0 28px rgba(223,163,5,0.38);
+      --radius:      12px;
+      --max:         1440px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
     body {
-      background: var(--midnight);
+      background: var(--brown);
       color: var(--cream);
       font-family: "Poppins", sans-serif;
       line-height: 1.65;
@@ -64,7 +66,7 @@
     }
 
     /* ============================================================
-       FLOATING PARTICLES (diya flames / stars)
+       FLOATING PARTICLES
     ============================================================ */
     .particles {
       pointer-events: none;
@@ -83,74 +85,72 @@
 
     @keyframes particleDrift {
       0%   { opacity: 0;   transform: translateY(0) scale(0.6); }
-      30%  { opacity: 0.9; }
-      70%  { opacity: 0.7; }
+      30%  { opacity: 0.8; }
+      70%  { opacity: 0.6; }
       100% { opacity: 0;   transform: translateY(-80px) scale(1.2); }
     }
 
     /* ============================================================
-       INTRO SPLASH — Janmashtami style
+       INTRO SPLASH — Brand Pure Style
     ============================================================ */
     .splash {
       position: fixed;
       inset: 0;
       z-index: 300;
-      background: radial-gradient(ellipse at 50% 40%, #2a1a6e 0%, #0d0a1a 70%);
+      background: radial-gradient(ellipse at 50% 40%, var(--light-brown) 0%, var(--deep-brown) 70%);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       gap: 28px;
-      animation: splashFade 0.8s ease 3.8s forwards;
+      cursor: pointer;
+      animation: splashFade 0.8s ease 3.4s forwards;
     }
 
     .splash-circle {
-      width: clamp(220px, 38vw, 380px);
+      width: clamp(200px, 32vw, 320px);
       aspect-ratio: 1;
       border-radius: 50%;
-      border: 2px solid rgba(245,200,66,0.4);
-      box-shadow: 0 0 60px rgba(245,200,66,0.25), inset 0 0 40px rgba(245,200,66,0.1);
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 50px rgba(223,163,5,0.35), inset 0 0 30px rgba(223,163,5,0.15);
       overflow: hidden;
-      animation: splashPop 1s cubic-bezier(0.18,0.89,0.32,1.1) 0.3s both;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      animation: splashPop 1s cubic-bezier(0.18,0.89,0.32,1.1) 0.2s both;
       position: relative;
-    }
-
-    .splash-circle::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.18), transparent 60%);
     }
 
     .splash-circle img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     .splash-title {
       font-family: "Playfair Display", serif;
-      font-size: clamp(2rem, 6vw, 4rem);
+      font-size: clamp(2rem, 5vw, 3.6rem);
       font-weight: 800;
       color: var(--gold);
       text-align: center;
-      text-shadow: 0 0 30px rgba(245,200,66,0.7);
-      animation: splashText 1s ease 1.2s both;
+      text-shadow: 0 0 25px rgba(223,163,5,0.5);
+      animation: splashText 1s ease 0.8s both;
     }
 
     .splash-sub {
-      color: rgba(255,248,240,0.75);
-      font-size: clamp(0.85rem, 2vw, 1.1rem);
+      color: rgba(255,248,240,0.8);
+      font-size: clamp(0.85rem, 2vw, 1.05rem);
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      animation: splashText 1s ease 1.6s both;
+      animation: splashText 1s ease 1.1s both;
     }
 
     .splash-particles span {
       position: absolute;
       border-radius: 50%;
-      background: radial-gradient(circle, #ffe97a, #ff8c00 60%, transparent);
+      background: radial-gradient(circle, var(--gold-light), var(--gold) 60%, transparent);
       animation: splashPart var(--dur) ease-in-out var(--delay) infinite alternate;
       opacity: 0;
     }
@@ -183,9 +183,9 @@
       top: 0; left: 0; width: 100%;
       z-index: 100;
       padding: 14px 28px;
-      background: rgba(13,10,26,0.88);
+      background: rgba(59,31,16,0.92);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(245,200,66,0.18);
+      border-bottom: 1px solid rgba(223,163,5,0.25);
       transition: background 0.3s;
     }
 
@@ -204,13 +204,13 @@
     }
 
     .brand-logo {
-      height: 56px;
-      width: 148px;
+      height: 54px;
+      width: 144px;
       object-fit: contain;
       border-radius: 999px;
       background: var(--cream);
       padding: 4px 8px;
-      border: 1px solid rgba(245,200,66,0.35);
+      border: 1px solid var(--gold);
     }
 
     .brand-subtitle {
@@ -230,7 +230,7 @@
     }
 
     .nav-links a {
-      color: rgba(255,248,240,0.88);
+      color: rgba(255,248,240,0.9);
       font-size: 1rem;
       font-weight: 600;
       position: relative;
@@ -242,7 +242,7 @@
       position: absolute;
       bottom: -4px; left: 0;
       width: 0; height: 2px;
-      background: linear-gradient(90deg, var(--gold), var(--saffron));
+      background: linear-gradient(90deg, var(--gold), var(--green));
       border-radius: 2px;
       transition: width 0.25s ease;
     }
@@ -256,8 +256,8 @@
       justify-content: center;
       width: 42px; height: 42px;
       border-radius: 50%;
-      background: rgba(245,200,66,0.12);
-      border: 1px solid rgba(245,200,66,0.3);
+      background: rgba(223,163,5,0.12);
+      border: 1px solid rgba(223,163,5,0.35);
       color: var(--cream);
       cursor: pointer;
     }
@@ -273,25 +273,22 @@
       overflow: hidden;
     }
 
-    /* Starfield background */
     .hero-bg {
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse at 20% 50%, rgba(0,180,216,0.12) 0%, transparent 55%),
-        radial-gradient(ellipse at 80% 20%, rgba(245,200,66,0.14) 0%, transparent 45%),
-        radial-gradient(ellipse at 55% 90%, rgba(232,62,140,0.10) 0%, transparent 40%),
-        linear-gradient(160deg, #1a1440 0%, #0d0a1a 50%, #130f2a 100%);
+        radial-gradient(ellipse at 20% 50%, rgba(32,101,34,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(223,163,5,0.18) 0%, transparent 45%),
+        linear-gradient(160deg, #3B1F10 0%, #251209 60%, #1e0e06 100%);
       z-index: -2;
     }
 
-    /* Mandala rings */
     .hero-mandala {
       position: absolute;
       right: -160px; top: 80px;
       width: 620px; height: 620px;
       border-radius: 50%;
-      border: 1px solid rgba(245,200,66,0.15);
+      border: 1px solid rgba(223,163,5,0.15);
       z-index: -1;
       animation: mandalaRotate 40s linear infinite;
     }
@@ -299,7 +296,7 @@
       content: "";
       position: absolute;
       border-radius: 50%;
-      border: 1px solid rgba(245,200,66,0.12);
+      border: 1px solid rgba(223,163,5,0.12);
     }
     .hero-mandala::before { inset: 60px; animation: mandalaRotate 25s linear reverse infinite; }
     .hero-mandala::after  { inset: 130px; }
@@ -317,16 +314,14 @@
       padding: 0 24px;
     }
 
-    .hero-left {}
-
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 8px 18px;
       border-radius: 999px;
-      background: rgba(245,200,66,0.12);
-      border: 1px solid rgba(245,200,66,0.35);
+      background: rgba(223,163,5,0.14);
+      border: 1px solid rgba(223,163,5,0.38);
       color: var(--gold);
       font-size: 0.85rem;
       font-weight: 700;
@@ -338,19 +333,18 @@
 
     .hero h1 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(3rem, 6.5vw, 6.2rem);
-      line-height: 1.0;
+      font-size: clamp(3rem, 6.2vw, 6rem);
+      line-height: 1.02;
       font-weight: 800;
       margin-bottom: 12px;
       animation: fadeUp 0.8s ease 0.4s both;
     }
 
     .hero h1 .gold  { color: var(--gold); }
-    .hero h1 .saffron { color: var(--saffron); }
-    .hero h1 .peacock { color: var(--peacock); }
+    .hero h1 .green { color: var(--green-light); }
 
     .hero-desc {
-      color: rgba(255,248,240,0.78);
+      color: rgba(255,248,240,0.82);
       font-size: clamp(1rem, 1.8vw, 1.2rem);
       max-width: 520px;
       margin: 18px 0 32px;
@@ -386,10 +380,10 @@
 
     .stat span {
       font-size: 0.82rem;
-      color: rgba(255,248,240,0.65);
+      color: rgba(255,248,240,0.7);
     }
 
-    /* Hero right — image showcase */
+    /* Hero right — product jar showcase */
     .hero-right {
       position: relative;
       display: flex;
@@ -399,14 +393,14 @@
 
     .hero-img-frame {
       position: relative;
-      width: clamp(280px, 38vw, 480px);
+      width: clamp(280px, 38vw, 460px);
     }
 
     .hero-img-main {
       border-radius: 24px;
       width: 100%;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.6), 0 0 40px rgba(245,200,66,0.18);
-      border: 1px solid rgba(245,200,66,0.25);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.6), 0 0 40px rgba(223,163,5,0.2);
+      border: 2px solid rgba(223,163,5,0.35);
       animation: imgFloat 4s ease-in-out infinite;
     }
 
@@ -414,20 +408,19 @@
       position: absolute;
       bottom: -28px;
       right: -28px;
-      width: 42%;
-      border-radius: 16px;
-      border: 3px solid rgba(245,200,66,0.4);
+      width: 44%;
+      border-radius: 18px;
+      border: 3px solid var(--gold);
       box-shadow: 0 12px 30px rgba(0,0,0,0.5);
       animation: imgFloat 4s ease-in-out 1.5s infinite;
     }
 
-    /* Diya glow orb */
     .hero-glow {
       position: absolute;
       width: 55%;
       aspect-ratio: 1;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(245,200,66,0.22), rgba(255,140,0,0.08) 60%, transparent);
+      background: radial-gradient(circle, rgba(223,163,5,0.22), rgba(32,101,34,0.1) 60%, transparent);
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
       pointer-events: none;
@@ -478,27 +471,29 @@
     .btn:hover { transform: translateY(-3px); }
 
     .btn-gold {
-      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--saffron));
-      color: var(--midnight);
-      box-shadow: 0 8px 24px rgba(245,200,66,0.35);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: var(--brown);
+      box-shadow: 0 8px 24px rgba(223,163,5,0.35);
     }
 
-    .btn-gold:hover { box-shadow: 0 12px 32px rgba(245,200,66,0.55); }
+    .btn-gold:hover { box-shadow: 0 12px 32px rgba(223,163,5,0.55); }
 
     .btn-whatsapp {
-      background: #1ea952;
+      background: var(--green);
       color: var(--white);
-      box-shadow: 0 8px 20px rgba(30,169,82,0.3);
+      box-shadow: 0 8px 20px rgba(32,101,34,0.4);
     }
+
+    .btn-whatsapp:hover { background: var(--green-light); box-shadow: 0 12px 28px rgba(32,101,34,0.6); }
 
     .btn-outline {
       background: transparent;
-      border: 1.5px solid rgba(245,200,66,0.5);
+      border: 1.5px solid rgba(223,163,5,0.5);
       color: var(--gold);
     }
 
     .btn-outline:hover {
-      background: rgba(245,200,66,0.08);
+      background: rgba(223,163,5,0.1);
       border-color: var(--gold);
     }
 
@@ -506,9 +501,9 @@
        FESTIVE BANNER STRIP
     ============================================================ */
     .festival-strip {
-      background: linear-gradient(90deg, #1a0a3a, #2a1060, #1a0a3a);
-      border-top: 1px solid rgba(245,200,66,0.2);
-      border-bottom: 1px solid rgba(245,200,66,0.2);
+      background: linear-gradient(90deg, #251209, var(--brown), #251209);
+      border-top: 1px solid rgba(223,163,5,0.22);
+      border-bottom: 1px solid rgba(223,163,5,0.22);
       padding: 14px 0;
       overflow: hidden;
     }
@@ -532,7 +527,7 @@
     }
 
     .festival-strip-inner span i {
-      color: var(--saffron);
+      color: var(--green-light);
     }
 
     @keyframes marquee {
@@ -560,8 +555,8 @@
       color: var(--cream);
     }
 
-    .section-title .gold    { color: var(--gold); }
-    .section-title .saffron { color: var(--saffron); }
+    .section-title .gold  { color: var(--gold); }
+    .section-title .green { color: var(--green-light); }
 
     .section-copy {
       color: var(--muted);
@@ -574,14 +569,14 @@
        PRODUCTS SECTION
     ============================================================ */
     .products {
-      background: linear-gradient(160deg, #130f2a 0%, #0d0a1a 100%);
+      background: linear-gradient(160deg, #251209 0%, #3B1F10 100%);
     }
 
     .products::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 80% 30%, rgba(245,200,66,0.07), transparent 50%);
+      background: radial-gradient(ellipse at 80% 30%, rgba(223,163,5,0.08), transparent 50%);
     }
 
     .product-grid {
@@ -597,7 +592,7 @@
 
     .product-card {
       background: rgba(255,248,240,0.04);
-      border: 1px solid rgba(245,200,66,0.18);
+      border: 1px solid rgba(223,163,5,0.22);
       border-radius: var(--radius);
       overflow: hidden;
       position: relative;
@@ -606,7 +601,7 @@
 
     .product-card:hover {
       transform: translateY(-10px);
-      border-color: rgba(245,200,66,0.5);
+      border-color: var(--gold);
       box-shadow: 0 20px 50px rgba(0,0,0,0.4), var(--glow-gold);
     }
 
@@ -614,8 +609,8 @@
       position: absolute;
       top: 14px; left: 14px;
       z-index: 2;
-      background: linear-gradient(135deg, var(--gold), var(--saffron));
-      color: var(--midnight);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: var(--brown);
       font-size: 0.82rem;
       font-weight: 800;
       padding: 6px 14px;
@@ -626,7 +621,7 @@
     .product-image {
       height: 260px;
       overflow: hidden;
-      background: linear-gradient(135deg, #1a1440, #2a1060);
+      background: linear-gradient(135deg, #251209, var(--brown));
       position: relative;
     }
 
@@ -679,10 +674,10 @@
     }
 
     .discount-pill {
-      background: rgba(30,200,80,0.12);
-      border: 1px solid rgba(30,200,80,0.25);
+      background: rgba(32,101,34,0.22);
+      border: 1px solid rgba(32,101,34,0.45);
       border-radius: 999px;
-      color: #4ade80;
+      color: #5edb62;
       font-size: 0.8rem;
       padding: 3px 10px;
     }
@@ -691,8 +686,8 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(245,200,66,0.1);
-      border: 1px solid rgba(245,200,66,0.22);
+      background: rgba(223,163,5,0.12);
+      border: 1px solid rgba(223,163,5,0.28);
       border-radius: 999px;
       color: var(--gold);
       font-size: 0.88rem;
@@ -701,7 +696,7 @@
     }
 
     .pack-note {
-      color: var(--saffron);
+      color: var(--gold);
       font-size: 0.95rem;
       font-weight: 700;
     }
@@ -711,7 +706,6 @@
       min-height: 44px;
     }
 
-    /* Coming soon overlay */
     .coming-soon-image { position: relative; }
 
     .coming-soon-image img {
@@ -737,7 +731,7 @@
        WHY SECTION (icon grid)
     ============================================================ */
     .why {
-      background: linear-gradient(160deg, #0d0a1a, #1a1440);
+      background: linear-gradient(160deg, #3B1F10, #251209);
     }
 
     .icon-grid {
@@ -748,8 +742,8 @@
     }
 
     .icon-box {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(245,200,66,0.15);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(223,163,5,0.2);
       border-radius: var(--radius);
       padding: 30px 24px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -758,7 +752,7 @@
     .icon-box:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 32px rgba(0,0,0,0.3), var(--glow-gold);
-      border-color: rgba(245,200,66,0.38);
+      border-color: var(--gold);
     }
 
     .icon-box i {
@@ -766,9 +760,9 @@
       align-items: center;
       justify-content: center;
       width: 52px; height: 52px;
-      background: linear-gradient(135deg, var(--gold), var(--saffron));
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
       border-radius: 50%;
-      color: var(--midnight);
+      color: var(--brown);
       font-size: 1.2rem;
       margin-bottom: 18px;
     }
@@ -789,7 +783,7 @@
        BENEFITS
     ============================================================ */
     .benefits {
-      background: linear-gradient(160deg, #130f2a, #0d0a1a);
+      background: linear-gradient(160deg, #251209, #3B1F10);
     }
 
     .benefit-grid {
@@ -800,8 +794,8 @@
     }
 
     .benefit {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(0,180,216,0.2);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(32,101,34,0.35);
       border-radius: var(--radius);
       padding: 28px 20px;
       text-align: center;
@@ -810,8 +804,8 @@
 
     .benefit:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 32px rgba(0,180,216,0.15);
-      border-color: rgba(0,180,216,0.45);
+      box-shadow: 0 12px 32px rgba(32,101,34,0.25);
+      border-color: var(--green-light);
     }
 
     .benefit i {
@@ -819,7 +813,7 @@
       align-items: center;
       justify-content: center;
       width: 52px; height: 52px;
-      background: linear-gradient(135deg, var(--peacock), #0077b6);
+      background: linear-gradient(135deg, var(--green-light), var(--green));
       border-radius: 50%;
       color: var(--white);
       font-size: 1.2rem;
@@ -842,7 +836,7 @@
        ABOUT
     ============================================================ */
     .about {
-      background: linear-gradient(160deg, #0d0a1a, #1a1440);
+      background: linear-gradient(160deg, #3B1F10, #251209);
     }
 
     .about-grid {
@@ -854,14 +848,14 @@
 
     .story-card {
       background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(245,200,66,0.15);
+      border: 1px solid rgba(223,163,5,0.2);
       border-radius: var(--radius);
       padding: 36px;
       margin-top: 24px;
     }
 
     .story-card p {
-      color: rgba(255,248,240,0.8);
+      color: rgba(255,248,240,0.85);
       font-size: 1rem;
       line-height: 1.75;
     }
@@ -881,7 +875,7 @@
       gap: 10px;
       padding: 14px 16px;
       background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(245,200,66,0.18);
+      border: 1px solid rgba(223,163,5,0.22);
       border-radius: var(--radius);
     }
 
@@ -891,7 +885,7 @@
     .farm-frame {
       border-radius: var(--radius);
       overflow: hidden;
-      border: 1px solid rgba(245,200,66,0.2);
+      border: 1px solid rgba(223,163,5,0.25);
       box-shadow: var(--shadow);
     }
 
@@ -906,7 +900,7 @@
        TESTIMONIALS
     ============================================================ */
     .testimonials {
-      background: linear-gradient(160deg, #130f2a, #0d0a1a);
+      background: linear-gradient(160deg, #251209, #3B1F10);
     }
 
     .review-grid {
@@ -918,7 +912,7 @@
 
     .review {
       background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(245,200,66,0.15);
+      border: 1px solid rgba(223,163,5,0.2);
       border-radius: var(--radius);
       padding: 28px;
       transition: transform 0.2s;
@@ -926,7 +920,7 @@
 
     .review:hover {
       transform: translateY(-5px);
-      border-color: rgba(245,200,66,0.35);
+      border-color: var(--gold);
     }
 
     .stars {
@@ -937,7 +931,7 @@
     }
 
     .review p {
-      color: rgba(255,248,240,0.78);
+      color: rgba(255,248,240,0.8);
       font-size: 0.98rem;
       font-style: italic;
       line-height: 1.7;
@@ -959,15 +953,15 @@
        CONTACT
     ============================================================ */
     .contact {
-      background: linear-gradient(160deg, #0d0a1a, #1a1440);
+      background: linear-gradient(160deg, #3B1F10, #251209);
     }
 
     .contact-card {
       max-width: 680px;
       margin: 0 auto;
       text-align: center;
-      background: rgba(245,200,66,0.05);
-      border: 1px solid rgba(245,200,66,0.22);
+      background: rgba(223,163,5,0.06);
+      border: 1px solid rgba(223,163,5,0.28);
       border-radius: 20px;
       padding: 56px 44px;
     }
@@ -984,7 +978,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: rgba(255,248,240,0.8);
+      color: rgba(255,248,240,0.85);
       font-size: 1rem;
     }
 
@@ -1002,7 +996,7 @@
       width: 44px; height: 44px;
       border-radius: 50%;
       background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(245,200,66,0.25);
+      border: 1px solid rgba(223,163,5,0.3);
       color: var(--gold);
       font-size: 1.1rem;
       transition: transform 0.2s, background 0.2s;
@@ -1010,15 +1004,15 @@
 
     .socials a:hover {
       transform: scale(1.15);
-      background: rgba(245,200,66,0.15);
+      background: rgba(223,163,5,0.18);
     }
 
     /* ============================================================
        FOOTER
     ============================================================ */
     .footer {
-      background: #070510;
-      border-top: 1px solid rgba(245,200,66,0.14);
+      background: #190a03;
+      border-top: 1px solid rgba(223,163,5,0.18);
       padding: 48px 24px 32px;
     }
 
@@ -1098,19 +1092,19 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: #1ea952;
+      background: var(--green);
       color: var(--white);
       font-weight: 700;
       font-size: 0.98rem;
       padding: 14px 22px;
       border-radius: 999px;
-      box-shadow: 0 8px 24px rgba(30,169,82,0.5);
+      box-shadow: 0 8px 24px rgba(32,101,34,0.5);
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .float-whatsapp:hover {
       transform: translateY(-4px);
-      box-shadow: 0 14px 32px rgba(30,169,82,0.6);
+      box-shadow: 0 14px 32px rgba(32,101,34,0.7);
     }
 
     /* ============================================================
@@ -1151,13 +1145,13 @@
       .nav-links {
         position: absolute;
         top: 60px; left: 0; right: 0;
-        background: rgba(13,10,26,0.97);
+        background: rgba(59,31,16,0.98);
         flex-direction: column;
         gap: 0;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.25s ease;
-        border-bottom: 1px solid rgba(245,200,66,0.18);
+        border-bottom: 1px solid rgba(223,163,5,0.25);
       }
 
       .nav-links.open { max-height: 340px; }
@@ -1165,7 +1159,7 @@
       .nav-links li a {
         display: block;
         padding: 14px 24px;
-        border-bottom: 1px solid rgba(255,255,255,0.04);
+        border-bottom: 1px solid rgba(255,255,255,0.05);
       }
 
       .hero-container  { grid-template-columns: 1fr; text-align: center; gap: 40px; }
@@ -1210,22 +1204,22 @@
 <body>
 
   <!-- ======================================================
-       FLOATING PARTICLES (background ambiance)
+       FLOATING PARTICLES
   ====================================================== -->
   <div class="particles" aria-hidden="true">
-    <span style="left:8%;top:22%;width:5px;height:5px;background:radial-gradient(circle,#ffe97a,#ff8c00);--dur:7s;--delay:0s;"></span>
-    <span style="left:18%;top:65%;width:7px;height:7px;background:radial-gradient(circle,#ffe97a,#ff8c00);--dur:9s;--delay:1.2s;"></span>
-    <span style="left:32%;top:14%;width:4px;height:4px;background:radial-gradient(circle,#ffe97a,var(--gold));--dur:6s;--delay:0.5s;"></span>
-    <span style="left:50%;top:78%;width:6px;height:6px;background:radial-gradient(circle,#ffe97a,#ff8c00);--dur:8s;--delay:2s;"></span>
-    <span style="left:65%;top:32%;width:5px;height:5px;background:radial-gradient(circle,#ffe97a,#f5c842);--dur:7.5s;--delay:0.8s;"></span>
-    <span style="left:78%;top:58%;width:8px;height:8px;background:radial-gradient(circle,#ffe97a,#ff8c00);--dur:10s;--delay:1.6s;"></span>
-    <span style="left:90%;top:18%;width:4px;height:4px;background:radial-gradient(circle,#ffe97a,#f5c842);--dur:6.5s;--delay:3s;"></span>
-    <span style="left:42%;top:45%;width:3px;height:3px;background:radial-gradient(circle,#00b4d8,transparent);--dur:8s;--delay:4s;"></span>
-    <span style="left:72%;top:85%;width:5px;height:5px;background:radial-gradient(circle,#e83e8c,transparent);--dur:9s;--delay:2.5s;"></span>
+    <span style="left:8%;top:22%;width:5px;height:5px;background:radial-gradient(circle,var(--gold-light),var(--gold));--dur:7s;--delay:0s;"></span>
+    <span style="left:18%;top:65%;width:7px;height:7px;background:radial-gradient(circle,var(--gold-light),var(--gold));--dur:9s;--delay:1.2s;"></span>
+    <span style="left:32%;top:14%;width:4px;height:4px;background:radial-gradient(circle,var(--gold-light),var(--gold));--dur:6s;--delay:0.5s;"></span>
+    <span style="left:50%;top:78%;width:6px;height:6px;background:radial-gradient(circle,var(--gold-light),var(--gold));--dur:8s;--delay:2s;"></span>
+    <span style="left:65%;top:32%;width:5px;height:5px;background:radial-gradient(circle,var(--gold-light),var(--gold));--dur:7.5s;--delay:0.8s;"></span>
+    <span style="left:78%;top:58%;width:8px;height:8px;background:radial-gradient(circle,var(--gold-light),var(--gold));--dur:10s;--delay:1.6s;"></span>
+    <span style="left:90%;top:18%;width:4px;height:4px;background:radial-gradient(circle,var(--gold-light),var(--gold));--dur:6.5s;--delay:3s;"></span>
+    <span style="left:42%;top:45%;width:4px;height:4px;background:radial-gradient(circle,var(--green-light),transparent);--dur:8s;--delay:4s;"></span>
+    <span style="left:72%;top:85%;width:5px;height:5px;background:radial-gradient(circle,var(--gold-light),transparent);--dur:9s;--delay:2.5s;"></span>
   </div>
 
   <!-- ======================================================
-       JANMASHTAMI INTRO SPLASH
+       INTRO SPLASH
   ====================================================== -->
   <div class="splash" aria-hidden="true">
     <div class="splash-particles">
@@ -1238,10 +1232,10 @@
       <span style="left:70%;top:60%;width:6px;height:6px;--dur:3.6s;--delay:0.9s;"></span>
     </div>
     <div class="splash-circle">
-      <img src="assets/krishna-dahi-handi.jpg" alt="Janmashtami">
+      <img src="assets/ghriitam-logo-web.jpg" alt="Ghriitam logo">
     </div>
-    <div class="splash-title">🦚 Shri Krishna Janmashtami</div>
-    <div class="splash-sub">Ghriitam — Pure Bilona Ghee</div>
+    <div class="splash-title">GHRIITAM</div>
+    <div class="splash-sub">Pure Desi Bilona Ghee · Rooted by Purity</div>
   </div>
 
   <!-- ======================================================
@@ -1280,23 +1274,22 @@
         <!-- Left Content -->
         <div class="hero-left">
           <div class="hero-badge">
-            <i class="fa-solid fa-star-and-crescent"></i>
-            Janmashtami Special Offer
+            <i class="fa-solid fa-gem"></i>
+            10% OFF Festival Offer
           </div>
           <h1>
-            This<br>
-            <span class="gold">Janmashtami,</span><br>
-            <span class="saffron">Gift</span> Health<br>
-            &amp; <span class="peacock">Purity.</span>
+            Pure Ghee.<br>
+            <span class="gold">Rooted by</span><br>
+            <span class="green">Purity.</span>
           </h1>
           <p class="hero-desc">
-            Celebrate the divine festival of Shri Krishna's birth with 15% OFF on Ghriitam Desi Bilona Ghee + FREE DELIVERY on select orders. Pure. Traditional. Blessed.
+            Handcrafted with traditional Bilona wisdom. Enjoy 10% OFF on Ghriitam Desi Bilona Ghee + FREE DELIVERY on select orders.
           </p>
           <div class="hero-actions">
             <a class="btn btn-gold" href="#products">
               <i class="fa-solid fa-basket-shopping"></i> Shop Now
             </a>
-            <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%20Ghriitam%20Desi%20Bilona%20Ghee%20-%20Janmashtami%20Special" target="_blank" rel="noopener">
+            <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%20Ghriitam%20Desi%20Bilona%20Ghee%20at%2010%25%20OFF" target="_blank" rel="noopener">
               <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
             </a>
           </div>
@@ -1316,12 +1309,12 @@
           </div>
         </div>
 
-        <!-- Right — Images -->
+        <!-- Right — Product Showcase -->
         <div class="hero-right">
           <div class="hero-glow"></div>
           <div class="hero-img-frame">
-            <img class="hero-img-main" src="assets/krishna-makhan.jpg" alt="Little Krishna stealing butter — Janmashtami">
-            <img class="hero-img-thumb" src="assets/krishna-dahi-handi.jpg" alt="Dahi Handi — Janmashtami celebration">
+            <img class="hero-img-main" src="assets/ghriitam-jar-web.jpg" alt="Ghriitam Desi Bilona Ghee 500ml jar">
+            <img class="hero-img-thumb" src="assets/ghriitam-1l-jar.jpg" alt="Ghriitam 1 Litre Desi Bilona Ghee jar">
           </div>
         </div>
       </div>
@@ -1330,16 +1323,16 @@
     <!-- FESTIVAL STRIP -->
     <div class="festival-strip">
       <div class="festival-strip-inner">
-        <span><i class="fa-solid fa-om"></i> Shri Krishna Janmashtami Special</span>
-        <span><i class="fa-solid fa-gift"></i> 15% OFF on all Ghee Jars</span>
+        <span><i class="fa-solid fa-leaf"></i> Rooted by Purity</span>
+        <span><i class="fa-solid fa-tag"></i> 10% OFF on Ghee Jars</span>
         <span><i class="fa-solid fa-truck-fast"></i> FREE Delivery on select orders</span>
-        <span><i class="fa-solid fa-leaf"></i> 100% Pure Bilona Ghee</span>
-        <span><i class="fa-solid fa-star"></i> No Preservatives · No Shortcuts</span>
-        <span><i class="fa-solid fa-om"></i> Shri Krishna Janmashtami Special</span>
-        <span><i class="fa-solid fa-gift"></i> 15% OFF on all Ghee Jars</span>
+        <span><i class="fa-solid fa-check-double"></i> 100% Pure Bilona Ghee</span>
+        <span><i class="fa-solid fa-award"></i> No Preservatives · No Additives</span>
+        <span><i class="fa-solid fa-leaf"></i> Rooted by Purity</span>
+        <span><i class="fa-solid fa-tag"></i> 10% OFF on Ghee Jars</span>
         <span><i class="fa-solid fa-truck-fast"></i> FREE Delivery on select orders</span>
-        <span><i class="fa-solid fa-leaf"></i> 100% Pure Bilona Ghee</span>
-        <span><i class="fa-solid fa-star"></i> No Preservatives · No Shortcuts</span>
+        <span><i class="fa-solid fa-check-double"></i> 100% Pure Bilona Ghee</span>
+        <span><i class="fa-solid fa-award"></i> No Preservatives · No Additives</span>
       </div>
     </div>
 
@@ -1348,12 +1341,12 @@
       <div class="container">
         <div class="reveal">
           <span class="section-kicker">Our Pure Varieties</span>
-          <h2 class="section-title">Janmashtami <span class="gold">Special Offer.</span></h2>
-          <p class="section-copy">Celebrate Janmashtami with 15% OFF on Ghriitam Desi Bilona Ghee and FREE DELIVERY on select jar orders.</p>
+          <h2 class="section-title">Special Offer — <span class="gold">10% OFF.</span></h2>
+          <p class="section-copy">Enjoy 10% OFF on Ghriitam Desi Bilona Ghee and FREE DELIVERY on select jar orders.</p>
         </div>
         <div class="product-grid">
           <article class="product-card reveal">
-            <span class="card-ribbon">OFFER</span>
+            <span class="card-ribbon">10% OFF</span>
             <div class="product-image">
               <img src="assets/ghriitam-jar-web.jpg" alt="Ghriitam Desi Cow Ghee 500ml jar" loading="lazy">
             </div>
@@ -1362,17 +1355,17 @@
               <p>Premium Desi Bilona Ghee for everyday family meals and rituals.</p>
               <div class="price-list">
                 <span class="mrp">Price <s>&#8377;899</s></span>
-                <span class="offer">&#8377;799</span>
+                <span class="offer">&#8377;799 <span class="discount-pill">10% OFF</span></span>
                 <span class="delivery-pill"><i class="fa-solid fa-truck-fast"></i> FREE DELIVERY</span>
               </div>
-              <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%20500%20ML%20Desi%20Bilona%20Ghee%20from%20Ghriitam%20at%20the%20Janmashtami%20offer%20price%20of%20Rs.%20799%20with%20free%20delivery" target="_blank" rel="noopener">
+              <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%20500%20ML%20Desi%20Bilona%20Ghee%20from%20Ghriitam%20at%20the%2010%25%20OFF%20offer%20price%20of%20Rs.%20799%20with%20free%20delivery" target="_blank" rel="noopener">
                 <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
               </a>
             </div>
           </article>
 
           <article class="product-card reveal">
-            <span class="card-ribbon">OFFER</span>
+            <span class="card-ribbon">10% OFF</span>
             <div class="product-image">
               <img src="assets/ghriitam-1l-jar.jpg" alt="Ghriitam 1 Litre Desi Bilona Ghee jar" loading="lazy">
             </div>
@@ -1381,10 +1374,10 @@
               <p>Best value jar for homes that cook daily with pure traditional ghee.</p>
               <div class="price-list">
                 <span class="mrp">Price <s>&#8377;1,399</s></span>
-                <span class="offer">&#8377;1,259</span>
+                <span class="offer">&#8377;1,259 <span class="discount-pill">10% OFF</span></span>
                 <span class="delivery-pill"><i class="fa-solid fa-truck-fast"></i> FREE DELIVERY</span>
               </div>
-              <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%201%20Litre%20Desi%20Bilona%20Ghee%20from%20Ghriitam%20at%20the%20Janmashtami%20offer%20price%20of%20Rs.%201259%20with%20free%20delivery" target="_blank" rel="noopener">
+              <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%201%20Litre%20Desi%20Bilona%20Ghee%20from%20Ghriitam%20at%20the%2010%25%20OFF%20offer%20price%20of%20Rs.%201259%20with%20free%20delivery" target="_blank" rel="noopener">
                 <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
               </a>
             </div>
@@ -1393,10 +1386,10 @@
           <article class="product-card reveal">
             <span class="card-ribbon">&#8377;3,000 OFF</span>
             <div class="product-image">
-              <img src="assets/ghriitam-independence-combo-web.jpg" alt="Ghriitam Janmashtami Special Combo Pack" loading="lazy">
+              <img src="assets/ghriitam-independence-combo-web.jpg" alt="Ghriitam Special Combo Pack" loading="lazy">
             </div>
             <div class="product-body">
-              <h3>Janmashtami Combo Pack</h3>
+              <h3>Special Combo Pack</h3>
               <p>Includes 2L + 500ML Ghriitam Desi Bilona Ghee with 200ML FREE.</p>
               <div class="price-list">
                 <span class="mrp">Combo value <s>&#8377;5,999</s></span>
@@ -1404,7 +1397,7 @@
                 <span class="pack-note">2L + 500ML + 200ML FREE</span>
                 <span class="delivery-pill"><i class="fa-solid fa-truck-fast"></i> FREE DELIVERY</span>
               </div>
-              <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%20the%20Ghriitam%20Janmashtami%20Special%20Combo%20Pack%20for%20Rs.%202999%20with%202L%20%2B%20500ML%20%2B%20200ML%20free%20and%20free%20delivery" target="_blank" rel="noopener">
+              <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%20the%20Ghriitam%20Special%20Combo%20Pack%20for%20Rs.%202999%20with%202L%20%2B%20500ML%20%2B%20200ML%20free%20and%20free%20delivery" target="_blank" rel="noopener">
                 <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
               </a>
             </div>
@@ -1484,7 +1477,7 @@
       <div class="container">
         <div class="reveal">
           <span class="section-kicker">Health Benefits</span>
-          <h2 class="section-title">Daily nourishment, <span class="saffron">the traditional way.</span></h2>
+          <h2 class="section-title">Daily nourishment, <span class="green">the traditional way.</span></h2>
           <p class="section-copy">Ghriitam brings the warmth of pure ghee to rotis, dals, rice, sweets, and morning rituals.</p>
         </div>
         <div class="benefit-grid">
@@ -1602,7 +1595,7 @@
           <img class="brand-logo" src="assets/ghriitam-logo-web.jpg" alt="Ghriitam logo">
           <span class="brand-subtitle">Desi Bilona Ghee</span>
         </a>
-        <p>Ghriitam - Purity in Every Drop</p>
+        <p>Ghriitam - Rooted by Purity</p>
         <p>Ghriitam's vision is farmer and women empowerment through pure dairy manufacturing. 200+ farmers and 50+ women are proudly connected with Ghriitam.</p>
         <strong>Mr. Yogesh Guria, Founder of Ghriitam and the main pillar behind its vision.</strong>
       </div>
@@ -1620,7 +1613,7 @@
         <a href="https://www.facebook.com/Ghriitam" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Ghriitam</a>
       </div>
     </div>
-    <p class="footer-copy">Copyright 2025 Ghriitam 🦚 Happy Janmashtami</p>
+    <p class="footer-copy">Copyright 2025 Ghriitam 🍯 Rooted by Purity</p>
   </footer>
 
   <!-- FLOATING WHATSAPP -->
@@ -1647,7 +1640,7 @@
 
     if (splash) {
       splash.addEventListener("click", dismissSplash);
-      setTimeout(dismissSplash, 3600);
+      setTimeout(dismissSplash, 3200);
     }
 
     // ============================================================
@@ -1701,8 +1694,8 @@
     // ============================================================
     window.addEventListener("scroll", () => {
       navbar.style.background = window.scrollY > 50
-        ? "rgba(13,10,26,0.98)"
-        : "rgba(13,10,26,0.88)";
+        ? "rgba(59,31,16,0.98)"
+        : "rgba(59,31,16,0.92)";
     }, { passive: true });
   </script>
 </body>
