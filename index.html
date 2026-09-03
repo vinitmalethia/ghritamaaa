@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghriitam | Pure Ghee. Ancient Wisdom. Modern Living.</title>
+  <meta name="description" content="Ghriitam premium Indian ghee, handcrafted with traditional Bilona wisdom for modern homes.">
+  <meta name="theme-color" content="#0d0a1a">
+  <!-- Open Graph / WhatsApp sharing -->
+  <meta property="og:title" content="Ghriitam | Pure Desi Bilona Ghee - Janmashtami Offer">
+  <meta property="og:description" content="Celebrate Shri Krishna Janmashtami with 15% OFF on Ghriitam Desi Bilona Ghee + FREE Delivery across India.">
+  <meta property="og:image" content="assets/krishna-makhan.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦚</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* ============================================================
+       ROOT TOKENS — Janmashtami palette
+       Deep navy-midnight + golden saffron + lotus pink + peacock teal
+    ============================================================ */
+    :root {
+      --midnight:  #0d0a1a;
+      --deep-navy: #130f2a;
+      --navy:      #1a1440;
+      --gold:      #f5c842;
+      --gold-light:#ffe97a;
+      --saffron:   #ff8c00;
+      --peacock:   #00b4d8;
+      --lotus:     #e83e8c;
+      --cream:     #fff8f0;
+      --white:     #ffffff;
+      --muted:     #9e9bbf;
+      --shadow:    0 16px 40px rgba(0,0,0,0.45);
+      --glow-gold: 0 0 28px rgba(245,200,66,0.45);
+      --radius:    12px;
+      --max:       1440px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--midnight);
+      color: var(--cream);
+      font-family: "Poppins", sans-serif;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a   { color: inherit; text-decoration: none; }
+
+    section {
+      position: relative;
+      padding: 96px 24px;
+    }
+
+    .container {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+    }
+
+    /* ============================================================
+       FLOATING PARTICLES (diya flames / stars)
+    ============================================================ */
+    .particles {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .particles span {
+      position: absolute;
+      border-radius: 50%;
+      animation: particleDrift var(--dur, 8s) ease-in-out var(--delay, 0s) infinite alternate;
+      opacity: 0;
+    }
+
+    @keyframes particleDrift {
+      0%   { opacity: 0;   transform: translateY(0) scale(0.6); }
+      30%  { opacity: 0.9; }
+      70%  { opacity: 0.7; }
+      100% { opacity: 0;   transform: translateY(-80px) scale(1.2); }
+    }
+
+    /* ============================================================
+       INTRO SPLASH — Janmashtami style
+    ============================================================ */
+    .splash {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: radial-gradient(ellipse at 50% 40%, #2a1a6e 0%, #0d0a1a 70%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 28px;
+      animation: splashFade 0.8s ease 3.8s forwards;
+    }
+
+    .splash-circle {
+      width: clamp(220px, 38vw, 380px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 2px solid rgba(245,200,66,0.4);
+      box-shadow: 0 0 60px rgba(245,200,66,0.25), inset 0 0 40px rgba(245,200,66,0.1);
+      overflow: hidden;
+      animation: splashPop 1s cubic-bezier(0.18,0.89,0.32,1.1) 0.3s both;
+      position: relative;
+    }
+
+    .splash-circle::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.18), transparent 60%);
+    }
+
+    .splash-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .splash-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 800;
+      color: var(--gold);
+      text-align: center;
+      text-shadow: 0 0 30px rgba(245,200,66,0.7);
+      animation: splashText 1s ease 1.2s both;
+    }
+
+    .splash-sub {
+      color: rgba(255,248,240,0.75);
+      font-size: clamp(0.85rem, 2vw, 1.1rem);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      animation: splashText 1s ease 1.6s both;
+    }
+
+    .splash-particles span {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffe97a, #ff8c00 60%, transparent);
+      animation: splashPart var(--dur) ease-in-out var(--delay) infinite alternate;
+      opacity: 0;
+    }
+
+    @keyframes splashPart {
+      0%   { opacity: 0;   transform: translateY(0); }
+      50%  { opacity: 0.9; }
+      100% { opacity: 0;   transform: translateY(-60px); }
+    }
+
+    @keyframes splashPop {
+      from { opacity: 0; transform: scale(0.5); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes splashText {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes splashFade {
+      to { opacity: 0; visibility: hidden; pointer-events: none; }
+    }
+
+    /* ============================================================
+       NAVBAR
+    ============================================================ */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      z-index: 100;
+      padding: 14px 28px;
+      background: rgba(13,10,26,0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(245,200,66,0.18);
+      transition: background 0.3s;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      height: 56px;
+      width: 148px;
+      object-fit: contain;
+      border-radius: 999px;
+      background: var(--cream);
+      padding: 4px 8px;
+      border: 1px solid rgba(245,200,66,0.35);
+    }
+
+    .brand-subtitle {
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      max-width: 9ch;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255,248,240,0.88);
+      font-size: 1rem;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.2s;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--saffron));
+      border-radius: 2px;
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: rgba(245,200,66,0.12);
+      border: 1px solid rgba(245,200,66,0.3);
+      color: var(--cream);
+      cursor: pointer;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      min-height: 100vh;
+      padding-top: 100px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    /* Starfield background */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(0,180,216,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(245,200,66,0.14) 0%, transparent 45%),
+        radial-gradient(ellipse at 55% 90%, rgba(232,62,140,0.10) 0%, transparent 40%),
+        linear-gradient(160deg, #1a1440 0%, #0d0a1a 50%, #130f2a 100%);
+      z-index: -2;
+    }
+
+    /* Mandala rings */
+    .hero-mandala {
+      position: absolute;
+      right: -160px; top: 80px;
+      width: 620px; height: 620px;
+      border-radius: 50%;
+      border: 1px solid rgba(245,200,66,0.15);
+      z-index: -1;
+      animation: mandalaRotate 40s linear infinite;
+    }
+    .hero-mandala::before, .hero-mandala::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(245,200,66,0.12);
+    }
+    .hero-mandala::before { inset: 60px; animation: mandalaRotate 25s linear reverse infinite; }
+    .hero-mandala::after  { inset: 130px; }
+
+    @keyframes mandalaRotate {
+      to { transform: rotate(360deg); }
+    }
+
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      width: min(100%, var(--max));
+      padding: 0 24px;
+    }
+
+    .hero-left {}
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(245,200,66,0.12);
+      border: 1px solid rgba(245,200,66,0.35);
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      animation: fadeUp 0.8s ease 0.2s both;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3rem, 6.5vw, 6.2rem);
+      line-height: 1.0;
+      font-weight: 800;
+      margin-bottom: 12px;
+      animation: fadeUp 0.8s ease 0.4s both;
+    }
+
+    .hero h1 .gold  { color: var(--gold); }
+    .hero h1 .saffron { color: var(--saffron); }
+    .hero h1 .peacock { color: var(--peacock); }
+
+    .hero-desc {
+      color: rgba(255,248,240,0.78);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      max-width: 520px;
+      margin: 18px 0 32px;
+      animation: fadeUp 0.8s ease 0.6s both;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      animation: fadeUp 0.8s ease 0.8s both;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+      animation: fadeUp 0.8s ease 1s both;
+    }
+
+    .stat {
+      border-left: 2px solid var(--gold);
+      padding-left: 16px;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .stat span {
+      font-size: 0.82rem;
+      color: rgba(255,248,240,0.65);
+    }
+
+    /* Hero right — image showcase */
+    .hero-right {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      animation: fadeIn 1.2s ease 0.6s both;
+    }
+
+    .hero-img-frame {
+      position: relative;
+      width: clamp(280px, 38vw, 480px);
+    }
+
+    .hero-img-main {
+      border-radius: 24px;
+      width: 100%;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.6), 0 0 40px rgba(245,200,66,0.18);
+      border: 1px solid rgba(245,200,66,0.25);
+      animation: imgFloat 4s ease-in-out infinite;
+    }
+
+    .hero-img-thumb {
+      position: absolute;
+      bottom: -28px;
+      right: -28px;
+      width: 42%;
+      border-radius: 16px;
+      border: 3px solid rgba(245,200,66,0.4);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+      animation: imgFloat 4s ease-in-out 1.5s infinite;
+    }
+
+    /* Diya glow orb */
+    .hero-glow {
+      position: absolute;
+      width: 55%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,200,66,0.22), rgba(255,140,0,0.08) 60%, transparent);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      animation: glowPulse 3s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    @keyframes imgFloat {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-12px); }
+    }
+
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+      50%       { opacity: 1;   transform: translate(-50%, -50%) scale(1.1); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      min-height: 52px;
+      padding: 14px 28px;
+      white-space: nowrap;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .btn:hover { transform: translateY(-3px); }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--saffron));
+      color: var(--midnight);
+      box-shadow: 0 8px 24px rgba(245,200,66,0.35);
+    }
+
+    .btn-gold:hover { box-shadow: 0 12px 32px rgba(245,200,66,0.55); }
+
+    .btn-whatsapp {
+      background: #1ea952;
+      color: var(--white);
+      box-shadow: 0 8px 20px rgba(30,169,82,0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid rgba(245,200,66,0.5);
+      color: var(--gold);
+    }
+
+    .btn-outline:hover {
+      background: rgba(245,200,66,0.08);
+      border-color: var(--gold);
+    }
+
+    /* ============================================================
+       FESTIVE BANNER STRIP
+    ============================================================ */
+    .festival-strip {
+      background: linear-gradient(90deg, #1a0a3a, #2a1060, #1a0a3a);
+      border-top: 1px solid rgba(245,200,66,0.2);
+      border-bottom: 1px solid rgba(245,200,66,0.2);
+      padding: 14px 0;
+      overflow: hidden;
+    }
+
+    .festival-strip-inner {
+      display: flex;
+      gap: 0;
+      white-space: nowrap;
+      animation: marquee 22s linear infinite;
+    }
+
+    .festival-strip-inner span {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.98rem;
+      letter-spacing: 0.06em;
+      padding: 0 40px;
+    }
+
+    .festival-strip-inner span i {
+      color: var(--saffron);
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ============================================================
+       SECTION HEADERS
+    ============================================================ */
+    .section-kicker {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.1;
+      color: var(--cream);
+    }
+
+    .section-title .gold    { color: var(--gold); }
+    .section-title .saffron { color: var(--saffron); }
+
+    .section-copy {
+      color: var(--muted);
+      font-size: 1.06rem;
+      max-width: 640px;
+      margin-top: 14px;
+    }
+
+    /* ============================================================
+       PRODUCTS SECTION
+    ============================================================ */
+    .products {
+      background: linear-gradient(160deg, #130f2a 0%, #0d0a1a 100%);
+    }
+
+    .products::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 30%, rgba(245,200,66,0.07), transparent 50%);
+    }
+
+    .product-grid {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 48px;
+    }
+
+    .full-width-card {
+      grid-column: 1 / -1;
+    }
+
+    .product-card {
+      background: rgba(255,248,240,0.04);
+      border: 1px solid rgba(245,200,66,0.18);
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(245,200,66,0.5);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4), var(--glow-gold);
+    }
+
+    .card-ribbon {
+      position: absolute;
+      top: 14px; left: 14px;
+      z-index: 2;
+      background: linear-gradient(135deg, var(--gold), var(--saffron));
+      color: var(--midnight);
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+
+    .product-image {
+      height: 260px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1a1440, #2a1060);
+      position: relative;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.06);
+    }
+
+    .product-body {
+      padding: 24px;
+    }
+
+    .product-body h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.55rem;
+      color: var(--cream);
+      line-height: 1.2;
+    }
+
+    .product-body p {
+      color: var(--muted);
+      font-size: 0.96rem;
+      margin: 10px 0 18px;
+      min-height: 54px;
+    }
+
+    .price-list { display: grid; gap: 8px; margin-bottom: 18px; }
+
+    .mrp {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .mrp s { text-decoration-thickness: 1.5px; }
+
+    .offer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      color: var(--gold);
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .discount-pill {
+      background: rgba(30,200,80,0.12);
+      border: 1px solid rgba(30,200,80,0.25);
+      border-radius: 999px;
+      color: #4ade80;
+      font-size: 0.8rem;
+      padding: 3px 10px;
+    }
+
+    .delivery-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245,200,66,0.1);
+      border: 1px solid rgba(245,200,66,0.22);
+      border-radius: 999px;
+      color: var(--gold);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 7px 12px;
+    }
+
+    .pack-note {
+      color: var(--saffron);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .product-body .btn {
+      width: 100%;
+      min-height: 44px;
+    }
+
+    /* Coming soon overlay */
+    .coming-soon-image { position: relative; }
+
+    .coming-soon-image img {
+      filter: brightness(0.45) saturate(0.4);
+    }
+
+    .coming-soon-image::after {
+      content: "COMING\A SOON";
+      white-space: pre;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: var(--gold);
+      text-align: center;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.8);
+      z-index: 2;
+    }
+
+    /* ============================================================
+       WHY SECTION (icon grid)
+    ============================================================ */
+    .why {
+      background: linear-gradient(160deg, #0d0a1a, #1a1440);
+    }
+
+    .icon-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      margin-top: 44px;
+    }
+
+    .icon-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(245,200,66,0.15);
+      border-radius: var(--radius);
+      padding: 30px 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .icon-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3), var(--glow-gold);
+      border-color: rgba(245,200,66,0.38);
+    }
+
+    .icon-box i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, var(--gold), var(--saffron));
+      border-radius: 50%;
+      color: var(--midnight);
+      font-size: 1.2rem;
+      margin-bottom: 18px;
+    }
+
+    .icon-box h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .icon-box p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* ============================================================
+       BENEFITS
+    ============================================================ */
+    .benefits {
+      background: linear-gradient(160deg, #130f2a, #0d0a1a);
+    }
+
+    .benefit-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      margin-top: 44px;
+    }
+
+    .benefit {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(0,180,216,0.2);
+      border-radius: var(--radius);
+      padding: 28px 20px;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .benefit:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,180,216,0.15);
+      border-color: rgba(0,180,216,0.45);
+    }
+
+    .benefit i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, var(--peacock), #0077b6);
+      border-radius: 50%;
+      color: var(--white);
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+    }
+
+    .benefit h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .benefit p {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    .about {
+      background: linear-gradient(160deg, #0d0a1a, #1a1440);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .story-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(245,200,66,0.15);
+      border-radius: var(--radius);
+      padding: 36px;
+      margin-top: 24px;
+    }
+
+    .story-card p {
+      color: rgba(255,248,240,0.8);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .story-card p + p { margin-top: 16px; }
+
+    .trust-badges {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 24px;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(245,200,66,0.18);
+      border-radius: var(--radius);
+    }
+
+    .badge i { color: var(--gold); font-size: 1.1rem; }
+    .badge strong { color: var(--cream); font-size: 0.92rem; }
+
+    .farm-frame {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(245,200,66,0.2);
+      box-shadow: var(--shadow);
+    }
+
+    .farm-frame img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+    }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    .testimonials {
+      background: linear-gradient(160deg, #130f2a, #0d0a1a);
+    }
+
+    .review-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 44px;
+    }
+
+    .review {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(245,200,66,0.15);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: transform 0.2s;
+    }
+
+    .review:hover {
+      transform: translateY(-5px);
+      border-color: rgba(245,200,66,0.35);
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .review p {
+      color: rgba(255,248,240,0.78);
+      font-size: 0.98rem;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .review strong {
+      display: block;
+      color: var(--cream);
+      margin-top: 16px;
+      font-weight: 700;
+    }
+
+    .review span {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    .contact {
+      background: linear-gradient(160deg, #0d0a1a, #1a1440);
+    }
+
+    .contact-card {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+      background: rgba(245,200,66,0.05);
+      border: 1px solid rgba(245,200,66,0.22);
+      border-radius: 20px;
+      padding: 56px 44px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,248,240,0.8);
+      font-size: 1rem;
+    }
+
+    .socials {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      margin-top: 28px;
+    }
+
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(245,200,66,0.25);
+      color: var(--gold);
+      font-size: 1.1rem;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .socials a:hover {
+      transform: scale(1.15);
+      background: rgba(245,200,66,0.15);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      background: #070510;
+      border-top: 1px solid rgba(245,200,66,0.14);
+      padding: 48px 24px 32px;
+    }
+
+    .footer-inner {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .footer-vision p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 380px;
+      margin-top: 8px;
+    }
+
+    .footer-vision strong {
+      display: block;
+      color: var(--gold);
+      font-size: 0.88rem;
+      margin-top: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-socials {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+
+    .footer-socials a:hover { color: var(--gold); }
+
+    .footer-copy {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.84rem;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      max-width: var(--max);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ============================================================
+       FLOATING WHATSAPP
+    ============================================================ */
+    .float-whatsapp {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 90;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #1ea952;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.98rem;
+      padding: 14px 22px;
+      border-radius: 999px;
+      box-shadow: 0 8px 24px rgba(30,169,82,0.5);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .float-whatsapp:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(30,169,82,0.6);
+    }
+
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1100px) {
+      .product-grid   { grid-template-columns: repeat(2, 1fr); }
+      .icon-grid      { grid-template-columns: repeat(2, 1fr); }
+      .benefit-grid   { grid-template-columns: repeat(3, 1fr); }
+      .about-grid     { grid-template-columns: 1fr; }
+      .review-grid    { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 760px) {
+      section { padding: 54px 16px; }
+
+      .navbar { padding: 10px 16px; }
+
+      .brand-logo { height: 42px; width: 104px; }
+      .brand-subtitle { font-size: 0.52rem; }
+
+      .menu-toggle { display: inline-flex; }
+
+      .nav-links {
+        position: absolute;
+        top: 60px; left: 0; right: 0;
+        background: rgba(13,10,26,0.97);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+        border-bottom: 1px solid rgba(245,200,66,0.18);
+      }
+
+      .nav-links.open { max-height: 340px; }
+
+      .nav-links li a {
+        display: block;
+        padding: 14px 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+      }
+
+      .hero-container  { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .hero-right      { margin-bottom: 48px; }
+      .hero-img-thumb  { right: -10px; bottom: -18px; }
+      .hero-stats      { justify-content: center; gap: 22px; }
+      .hero-actions    { justify-content: center; }
+      .hero-desc       { margin-left: auto; margin-right: auto; }
+
+      .product-grid    { grid-template-columns: 1fr !important; gap: 24px; }
+      .product-card    { grid-column: auto !important; width: 100%; }
+      .full-width-card { grid-column: auto !important; }
+      .product-image   { height: 260px; }
+      .product-body    { padding: 20px 18px; }
+      .product-body h3 { font-size: 1.45rem; word-break: break-word; }
+      .product-body p  { min-height: auto; font-size: 0.94rem; margin: 8px 0 16px; }
+
+      .icon-grid       { grid-template-columns: 1fr; }
+      .benefit-grid    { grid-template-columns: 1fr 1fr; }
+      .review-grid     { grid-template-columns: 1fr; }
+      .trust-badges    { grid-template-columns: 1fr 1fr; }
+
+      .contact-card    { padding: 36px 20px; }
+
+      .float-whatsapp  {
+        display: inline-flex !important;
+        bottom: 18px;
+        right: 18px;
+        padding: 12px 18px;
+        font-size: 0.88rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+      }
+
+      .farm-frame      { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .benefit-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================================
+       FLOATING PARTICLES (background ambiance)
+  ====================================================== -->
+  <div class="particles" aria-hidden="true">
+    <span style="left:8%;top:22%;width:5px;height:5px;background:radial-gradient(circle,#ffe97a,#ff8c00);--dur:7s;--delay:0s;"></span>
+    <span style="left:18%;top:65%;width:7px;height:7px;background:radial-gradient(circle,#ffe97a,#ff8c00);--dur:9s;--delay:1.2s;"></span>
+    <span style="left:32%;top:14%;width:4px;height:4px;background:radial-gradient(circle,#ffe97a,var(--gold));--dur:6s;--delay:0.5s;"></span>
+    <span style="left:50%;top:78%;width:6px;height:6px;background:radial-gradient(circle,#ffe97a,#ff8c00);--dur:8s;--delay:2s;"></span>
+    <span style="left:65%;top:32%;width:5px;height:5px;background:radial-gradient(circle,#ffe97a,#f5c842);--dur:7.5s;--delay:0.8s;"></span>
+    <span style="left:78%;top:58%;width:8px;height:8px;background:radial-gradient(circle,#ffe97a,#ff8c00);--dur:10s;--delay:1.6s;"></span>
+    <span style="left:90%;top:18%;width:4px;height:4px;background:radial-gradient(circle,#ffe97a,#f5c842);--dur:6.5s;--delay:3s;"></span>
+    <span style="left:42%;top:45%;width:3px;height:3px;background:radial-gradient(circle,#00b4d8,transparent);--dur:8s;--delay:4s;"></span>
+    <span style="left:72%;top:85%;width:5px;height:5px;background:radial-gradient(circle,#e83e8c,transparent);--dur:9s;--delay:2.5s;"></span>
+  </div>
+
+  <!-- ======================================================
+       JANMASHTAMI INTRO SPLASH
+  ====================================================== -->
+  <div class="splash" aria-hidden="true">
+    <div class="splash-particles">
+      <span style="left:15%;top:70%;width:8px;height:8px;--dur:3.5s;--delay:0.2s;"></span>
+      <span style="left:30%;top:20%;width:5px;height:5px;--dur:4s;--delay:0.7s;"></span>
+      <span style="left:60%;top:75%;width:9px;height:9px;--dur:3.8s;--delay:0.4s;"></span>
+      <span style="left:80%;top:30%;width:6px;height:6px;--dur:4.2s;--delay:1s;"></span>
+      <span style="left:50%;top:85%;width:7px;height:7px;--dur:3.2s;--delay:0.6s;"></span>
+      <span style="left:22%;top:45%;width:4px;height:4px;--dur:5s;--delay:1.2s;"></span>
+      <span style="left:70%;top:60%;width:6px;height:6px;--dur:3.6s;--delay:0.9s;"></span>
+    </div>
+    <div class="splash-circle">
+      <img src="assets/krishna-dahi-handi.jpg" alt="Janmashtami">
+    </div>
+    <div class="splash-title">🦚 Shri Krishna Janmashtami</div>
+    <div class="splash-sub">Ghriitam — Pure Bilona Ghee</div>
+  </div>
+
+  <!-- ======================================================
+       NAVBAR
+  ====================================================== -->
+  <nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#home" aria-label="Ghriitam home">
+        <img class="brand-logo" src="assets/ghriitam-logo-web.jpg" alt="Ghriitam logo">
+        <span class="brand-subtitle">Desi Bilona Ghee</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======================================================
+       MAIN
+  ====================================================== -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-mandala" aria-hidden="true"></div>
+
+      <div class="hero-container">
+        <!-- Left Content -->
+        <div class="hero-left">
+          <div class="hero-badge">
+            <i class="fa-solid fa-star-and-crescent"></i>
+            Janmashtami Special Offer
+          </div>
+          <h1>
+            This<br>
+            <span class="gold">Janmashtami,</span><br>
+            <span class="saffron">Gift</span> Health<br>
+            &amp; <span class="peacock">Purity.</span>
+          </h1>
+          <p class="hero-desc">
+            Celebrate the divine festival of Shri Krishna's birth with 15% OFF on Ghriitam Desi Bilona Ghee + FREE DELIVERY on select orders. Pure. Traditional. Blessed.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#products">
+              <i class="fa-solid fa-basket-shopping"></i> Shop Now
+            </a>
+            <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%20Ghriitam%20Desi%20Bilona%20Ghee%20-%20Janmashtami%20Special" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Pure &amp; Natural</span>
+            </div>
+            <div class="stat">
+              <strong>0</strong>
+              <span>Preservatives</span>
+            </div>
+            <div class="stat">
+              <strong>Bilona</strong>
+              <span>Traditional Craft</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right — Images -->
+        <div class="hero-right">
+          <div class="hero-glow"></div>
+          <div class="hero-img-frame">
+            <img class="hero-img-main" src="assets/krishna-makhan.jpg" alt="Little Krishna stealing butter — Janmashtami">
+            <img class="hero-img-thumb" src="assets/krishna-dahi-handi.jpg" alt="Dahi Handi — Janmashtami celebration">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FESTIVAL STRIP -->
+    <div class="festival-strip">
+      <div class="festival-strip-inner">
+        <span><i class="fa-solid fa-om"></i> Shri Krishna Janmashtami Special</span>
+        <span><i class="fa-solid fa-gift"></i> 15% OFF on all Ghee Jars</span>
+        <span><i class="fa-solid fa-truck-fast"></i> FREE Delivery on select orders</span>
+        <span><i class="fa-solid fa-leaf"></i> 100% Pure Bilona Ghee</span>
+        <span><i class="fa-solid fa-star"></i> No Preservatives · No Shortcuts</span>
+        <span><i class="fa-solid fa-om"></i> Shri Krishna Janmashtami Special</span>
+        <span><i class="fa-solid fa-gift"></i> 15% OFF on all Ghee Jars</span>
+        <span><i class="fa-solid fa-truck-fast"></i> FREE Delivery on select orders</span>
+        <span><i class="fa-solid fa-leaf"></i> 100% Pure Bilona Ghee</span>
+        <span><i class="fa-solid fa-star"></i> No Preservatives · No Shortcuts</span>
+      </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-kicker">Our Pure Varieties</span>
+          <h2 class="section-title">Janmashtami <span class="gold">Special Offer.</span></h2>
+          <p class="section-copy">Celebrate Janmashtami with 15% OFF on Ghriitam Desi Bilona Ghee and FREE DELIVERY on select jar orders.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <span class="card-ribbon">OFFER</span>
+            <div class="product-image">
+              <img src="assets/ghriitam-jar-web.jpg" alt="Ghriitam Desi Cow Ghee 500ml jar" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3>500 ML Jar</h3>
+              <p>Premium Desi Bilona Ghee for everyday family meals and rituals.</p>
+              <div class="price-list">
+                <span class="mrp">Price <s>&#8377;899</s></span>
+                <span class="offer">&#8377;799</span>
+                <span class="delivery-pill"><i class="fa-solid fa-truck-fast"></i> FREE DELIVERY</span>
+              </div>
+              <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%20500%20ML%20Desi%20Bilona%20Ghee%20from%20Ghriitam%20at%20the%20Janmashtami%20offer%20price%20of%20Rs.%20799%20with%20free%20delivery" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <span class="card-ribbon">OFFER</span>
+            <div class="product-image">
+              <img src="assets/ghriitam-1l-jar.jpg" alt="Ghriitam 1 Litre Desi Bilona Ghee jar" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3>1 Litre Jar</h3>
+              <p>Best value jar for homes that cook daily with pure traditional ghee.</p>
+              <div class="price-list">
+                <span class="mrp">Price <s>&#8377;1,399</s></span>
+                <span class="offer">&#8377;1,259</span>
+                <span class="delivery-pill"><i class="fa-solid fa-truck-fast"></i> FREE DELIVERY</span>
+              </div>
+              <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%201%20Litre%20Desi%20Bilona%20Ghee%20from%20Ghriitam%20at%20the%20Janmashtami%20offer%20price%20of%20Rs.%201259%20with%20free%20delivery" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <span class="card-ribbon">&#8377;3,000 OFF</span>
+            <div class="product-image">
+              <img src="assets/ghriitam-independence-combo-web.jpg" alt="Ghriitam Janmashtami Special Combo Pack" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3>Janmashtami Combo Pack</h3>
+              <p>Includes 2L + 500ML Ghriitam Desi Bilona Ghee with 200ML FREE.</p>
+              <div class="price-list">
+                <span class="mrp">Combo value <s>&#8377;5,999</s></span>
+                <span class="offer">&#8377;2,999 <span class="discount-pill">&#8377;3,000 OFF</span></span>
+                <span class="pack-note">2L + 500ML + 200ML FREE</span>
+                <span class="delivery-pill"><i class="fa-solid fa-truck-fast"></i> FREE DELIVERY</span>
+              </div>
+              <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%20the%20Ghriitam%20Janmashtami%20Special%20Combo%20Pack%20for%20Rs.%202999%20with%202L%20%2B%20500ML%20%2B%20200ML%20free%20and%20free%20delivery" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <span class="card-ribbon">Out of Stock</span>
+            <div class="product-image">
+              <img src="assets/ghriitam-50ml-sample-pack.png" alt="Ghriitam 50 ML Sample Pack jars" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3>50 ML Sample Box</h3>
+              <p>The sample box is currently out of stock.</p>
+              <div class="price-list">
+                <span class="offer">Out of stock</span>
+              </div>
+              <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20request%20the%2050%20ML%20Sample%20Box%20for%20bulk%20or%20wholesale%20order%20from%20Ghriitam" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Request Sample
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card reveal full-width-card">
+            <div class="product-image coming-soon-image" style="height:200px;">
+              <img src="assets/sugarcane-harvest-web.jpg" alt="Coming soon" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3>Nutritional Fulfilled Hamper</h3>
+              <p>Includes Ghee, Makhana, Laddus, and Multani face wash — coming soon!</p>
+              <div class="price-list">
+                <span class="mrp">Coming soon</span>
+                <span class="offer" style="font-size:1.1rem;">Thank You — Team GHRIITAM 🙏</span>
+              </div>
+              <a class="btn btn-outline" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20enquire%20about%20the%20Nutritional%20Fulfilled%20Hamper%20from%20Ghriitam" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Enquire Now
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-kicker">Why Choose Us</span>
+          <h2 class="section-title">Made slowly, honestly, and <span class="gold">close to nature.</span></h2>
+        </div>
+        <div class="icon-grid">
+          <div class="icon-box reveal">
+            <i class="fa-solid fa-check"></i>
+            <h3>100% Pure &amp; Natural</h3>
+            <p>Clean ingredients and a rich aroma you can feel from the first spoon.</p>
+          </div>
+          <div class="icon-box reveal">
+            <i class="fa-solid fa-mortar-pestle"></i>
+            <h3>Traditional Bilona Method</h3>
+            <p>Prepared with patient churning inspired by age-old Indian practice.</p>
+          </div>
+          <div class="icon-box reveal">
+            <i class="fa-solid fa-flask-vial"></i>
+            <h3>No Chemicals or Additives</h3>
+            <p>No synthetic preservatives, colors, or hidden shortcuts in the jar.</p>
+          </div>
+          <div class="icon-box reveal">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Farm to You</h3>
+            <p>Freshly packed and delivered across Punjab and all over India.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits" id="benefits">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-kicker">Health Benefits</span>
+          <h2 class="section-title">Daily nourishment, <span class="saffron">the traditional way.</span></h2>
+          <p class="section-copy">Ghriitam brings the warmth of pure ghee to rotis, dals, rice, sweets, and morning rituals.</p>
+        </div>
+        <div class="benefit-grid">
+          <div class="benefit reveal">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h3>Boosts Immunity</h3>
+            <p>Supports a nourishing diet with natural richness.</p>
+          </div>
+          <div class="benefit reveal">
+            <i class="fa-solid fa-bowl-food"></i>
+            <h3>Improves Digestion</h3>
+            <p>A classic Indian kitchen companion for balanced meals.</p>
+          </div>
+          <div class="benefit reveal">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h3>Good for Heart</h3>
+            <p>Enjoyed mindfully as part of wholesome home cooking.</p>
+          </div>
+          <div class="benefit reveal">
+            <i class="fa-solid fa-sun"></i>
+            <h3>Vitamins A/D/E/K</h3>
+            <p>Known for carrying fat-soluble vitamins naturally.</p>
+          </div>
+          <div class="benefit reveal">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Brain Function</h3>
+            <p>Traditional diets value ghee for energy and focus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="reveal">
+          <span class="section-kicker">Our Story</span>
+          <h2 class="section-title">Rooted in tradition, <span class="gold">crafted for today's kitchen.</span></h2>
+          <div class="story-card">
+            <p>Ghriitam began with a simple belief: the finest ghee should taste like care. Inspired by Indian homes, village dairies, and slow food wisdom, every batch is made to preserve aroma, texture, and natural goodness.</p>
+            <p>We keep our process honest: no preservatives, no shortcuts, no synthetic additives. Just farm-fresh ingredients and a patient method that brings out the deep golden richness ghee is known for.</p>
+          </div>
+          <div class="trust-badges">
+            <div class="badge"><i class="fa-solid fa-circle-check"></i><strong>100% Pure</strong></div>
+            <div class="badge"><i class="fa-solid fa-ban"></i><strong>No Preservatives</strong></div>
+            <div class="badge"><i class="fa-solid fa-hands"></i><strong>Hand-churned</strong></div>
+            <div class="badge"><i class="fa-solid fa-tractor"></i><strong>Farm Fresh</strong></div>
+          </div>
+        </div>
+        <div class="farm-frame reveal">
+          <img src="assets/farm-grain-web.jpg" alt="Farmer holding grains in the field" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-kicker">Customer Love</span>
+          <h2 class="section-title">Loved in everyday <span class="gold">Indian kitchens.</span></h2>
+        </div>
+        <div class="review-grid">
+          <article class="review reveal">
+            <div class="stars">★★★★★</div>
+            <p>"The aroma is exactly like homemade ghee. It has become part of our daily dal and roti."</p>
+            <strong>Priya Sharma</strong>
+            <span>Ludhiana</span>
+          </article>
+          <article class="review reveal">
+            <div class="stars">★★★★★</div>
+            <p>"Beautiful texture, rich taste, and clean packaging. The Bilona variant feels truly premium."</p>
+            <strong>Rajesh Verma</strong>
+            <span>Delhi</span>
+          </article>
+          <article class="review reveal">
+            <div class="stars">★★★★★</div>
+            <p>"I ordered for my parents and they immediately noticed the traditional flavor. Highly recommended."</p>
+            <strong>Simran Kaur</strong>
+            <span>Amritsar</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <span class="section-kicker">Order Now</span>
+          <h2 class="section-title">Order Now. It's Simple! 🙏</h2>
+          <p class="section-copy" style="margin:14px auto 0;text-align:center;">Message us on WhatsApp and tell us which Ghriitam variety you want. We deliver across Punjab and all over India.</p>
+          <div class="contact-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%20Ghriitam%20Desi%20Bilona%20Ghee" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+            </a>
+            <span class="phone"><i class="fa-solid fa-phone"></i> +91 93513 67604</span>
+            <a class="phone" href="mailto:Ghriitam@gmail.com"><i class="fa-solid fa-envelope"></i> Ghriitam@gmail.com</a>
+          </div>
+          <div class="socials" aria-label="Social links">
+            <a href="https://www.instagram.com/ghriitam___/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/Ghriitam" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@Ghriitam" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-vision">
+        <a class="brand" href="#home">
+          <img class="brand-logo" src="assets/ghriitam-logo-web.jpg" alt="Ghriitam logo">
+          <span class="brand-subtitle">Desi Bilona Ghee</span>
+        </a>
+        <p>Ghriitam - Purity in Every Drop</p>
+        <p>Ghriitam's vision is farmer and women empowerment through pure dairy manufacturing. 200+ farmers and 50+ women are proudly connected with Ghriitam.</p>
+        <strong>Mr. Yogesh Guria, Founder of Ghriitam and the main pillar behind its vision.</strong>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="mailto:Ghriitam@gmail.com"><i class="fa-solid fa-envelope"></i> Ghriitam@gmail.com</a>
+        <a href="https://www.instagram.com/ghriitam___/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @Ghriitam___</a>
+        <a href="https://www.youtube.com/@Ghriitam" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> @Ghriitam</a>
+        <a href="https://www.facebook.com/Ghriitam" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Ghriitam</a>
+      </div>
+    </div>
+    <p class="footer-copy">Copyright 2025 Ghriitam 🦚 Happy Janmashtami</p>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="float-whatsapp" href="https://wa.me/919351367604?text=Hi!%20I%20want%20to%20order%20Ghriitam%20Desi%20Bilona%20Ghee" target="_blank" rel="noopener" aria-label="Order Ghriitam on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i><span>Order on WhatsApp</span>
+  </a>
+
+  <script>
+    // ============================================================
+    // Splash screen & Body scroll lock
+    // ============================================================
+    const splash = document.querySelector(".splash");
+    document.body.style.overflow = "hidden";
+
+    function dismissSplash() {
+      if (!splash || splash.style.display === "none") return;
+      splash.style.opacity = "0";
+      splash.style.pointerEvents = "none";
+      setTimeout(() => {
+        splash.style.display = "none";
+        document.body.style.overflow = "";
+      }, 400);
+    }
+
+    if (splash) {
+      splash.addEventListener("click", dismissSplash);
+      setTimeout(dismissSplash, 3600);
+    }
+
+    // ============================================================
+    // Mobile menu toggle & Outside Click
+    // ============================================================
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks   = document.querySelector(".nav-links");
+    const navbar     = document.querySelector(".navbar");
+
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (navLinks.classList.contains("open") && !navbar.contains(e.target)) {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
+    });
+
+    // ============================================================
+    // Scroll reveal
+    // ============================================================
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
+
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+    // ============================================================
+    // Navbar background on scroll
+    // ============================================================
+    window.addEventListener("scroll", () => {
+      navbar.style.background = window.scrollY > 50
+        ? "rgba(13,10,26,0.98)"
+        : "rgba(13,10,26,0.88)";
+    }, { passive: true });
+  </script>
+</body>
+</html>
